@@ -1,4 +1,4 @@
-//! Main entry point for SimpleHTTPServer-Zig.
+//! Main entry point for Zerver-Zig.
 const std = @import("std");
 const options = @import("options.zig");
 const http_server = @import("http.zig");
@@ -20,7 +20,7 @@ fn run(allocator: std.mem.Allocator) !void {
     defer opts.deinit();
 
     if (!opts.silent) {
-        std.debug.print("Starting SimpleHTTPServer...\n", .{});
+        std.debug.print("Starting Zerver...\n", .{});
     }
 
     if (opts.enable_tcp) {

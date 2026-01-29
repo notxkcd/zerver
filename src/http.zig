@@ -38,7 +38,7 @@ pub fn start(allocator: std.mem.Allocator, options: Options) !void {
         const addr_str = std.fmt.bufPrint(&buf, "{f}", .{net_server.listen_address}) catch "unknown";
         const mode = if (options.proxy != null) "Proxy Mode" else if (options.live_server) "Live Server" else "Static Server";
         std.debug.print("\n------------------------------------------\n", .{});
-        std.debug.print("🚀 SimpleHTTPServer Pro (Zig Edition)\n", .{});
+        std.debug.print("🚀 Zerver Pro (Zig Edition)\n", .{});
         std.debug.print("📂 Root: {s}\n", .{options.folder});
         std.debug.print("🌐 URL:  http://{s}\n", .{addr_str});
         std.debug.print("🛠️ Mode: {s}\n", .{mode});
@@ -145,7 +145,7 @@ fn handleRequest(allocator: std.mem.Allocator, options: Options, request: *std.h
         if (!checkAuth(request, auth)) {
             try request.respond("Unauthorized", .{
                 .status = .unauthorized,
-                .extra_headers = &.{ .{ .name = "WWW-Authenticate", .value = "Basic realm=\"simplehttpserver\"" } },
+                .extra_headers = &.{ .{ .name = "WWW-Authenticate", .value = "Basic realm=\"zerver\"" } },
             });
             return;
         }
@@ -393,7 +393,7 @@ fn serveDirectory(allocator: std.mem.Allocator, options: Options, request: *std.
         const icon = getFileIcon(entry);
         try w.print("<li><a href=\"{s}{s}\"><span class=\"icon\">{s}</span> {s}{s}</a></li>", .{entry.name, if(is_dir) "/" else "", icon, entry.name, if(is_dir) "/" else ""});
     }
-    try w.writeAll("</ul><div class=\"footer\">SimpleHTTPServer</div></div>");
+    try w.writeAll("</ul><div class=\"footer\">Zerver</div></div>");
     if (options.live_server) try injectLiveReload(&w);
     try w.writeAll("</body></html>");
     try request.respond(html.items, .{ .extra_headers = &.{ .{ .name = "Content-Type", .value = "text/html; charset=utf-8" } } });

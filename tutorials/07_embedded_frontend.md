@@ -61,6 +61,6 @@ Running `zig build -Doptimize=ReleaseSmall` produces the final machine code. Thi
 Go out and write some more Zig. Slay the bloat. 
 
 ---
-*SimpleHTTPServer-Zig: Zero to Complete.*
+*Zerver-Zig: Zero to Complete.*
 
 ```

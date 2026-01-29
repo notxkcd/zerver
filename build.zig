@@ -34,14 +34,14 @@ pub fn build(b: *std.Build) void {
         const target_name = b.fmt("{s}-{s}", .{ @tagName(t.cpu_arch.?), @tagName(t.os_tag.?) });
 
         const exe_static = b.addExecutable(.{
-            .name = b.fmt("simplehttpserver-static-{s}", .{target_name}),
+            .name = b.fmt("zerver-static-{s}", .{target_name}),
             .root_module = root_module,
         });
         const install_static = b.addInstallArtifact(exe_static, .{});
         build_all_step.dependOn(&install_static.step);
 
         const exe_dynamic = b.addExecutable(.{
-            .name = b.fmt("simplehttpserver-dynamic-{s}", .{target_name}),
+            .name = b.fmt("zerver-dynamic-{s}", .{target_name}),
             .root_module = root_module,
         });
         exe_dynamic.linkLibC();
@@ -57,7 +57,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const exe_static_host = b.addExecutable(.{
-        .name = "simplehttpserver-static",
+        .name = "zerver-static",
         .root_module = host_root_module,
     });
     b.installArtifact(exe_static_host);

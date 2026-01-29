@@ -18,7 +18,7 @@ Stop using VS Code. Use a terminal. Use Vim or Neovim. Use something that doesn'
 2.  **Set your PATH:** Ensure `zig` is in your environment.
 3.  **Project Structure:**
     ```text
-    simplehttpserver/
+    zerver/
     ├── build.zig
     ├── src/
     │   ├── main.zig

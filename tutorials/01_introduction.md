@@ -31,14 +31,14 @@ pub fn build(b: *std.Build) void {
 
     // The Static Build - This is the default.
     const exe_static = b.addExecutable(.{
-        .name = "simplehttpserver-static",
+        .name = "zerver-static",
         .root_module = root_module,
     });
     b.installArtifact(exe_static);
 
     // The Dynamic Build - We explicitly call linkLibC().
     const exe_dynamic = b.addExecutable(.{
-        .name = "simplehttpserver-dynamic",
+        .name = "zerver-dynamic",
         .root_module = root_module,
     });
     exe_dynamic.linkLibC();

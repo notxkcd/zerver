@@ -1,4 +1,4 @@
-# SimpleHTTPServer-Zig Documentation
+# Zerver-Zig Documentation
 
 A high-performance, multithreaded, and secure file-serving machine rewritten from Go to pure Zig 0.15.2.
 
@@ -28,8 +28,8 @@ The project uses the standard Zig build system.
   zig build
   ```
   Generates two binaries in `zig-out/bin/`:
-  - `simplehttpserver-static`: Pure Zig standalone binary.
-  - `simplehttpserver-dynamic`: Linked against system `libc`.
+  - `zerver-static`: Pure Zig standalone binary.
+  - `zerver-dynamic`: Linked against system `libc`.
 
 - **Cross-Compilation** (Build for Linux, Windows, macOS):
   ```bash

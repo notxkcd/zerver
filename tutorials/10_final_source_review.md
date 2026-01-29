@@ -26,7 +26,7 @@ while (it.next()) |line| {
 ```
 
 ## 3. Remote Logging Proxy
-SimpleHTTPServer Pro captures your browser's `console.log` and proxies it to your terminal. This was achieved by hijacking the `console.log` function in the injected script and sending a `POST` to `/ls-log`.
+Zerver Pro captures your browser's `console.log` and proxies it to your terminal. This was achieved by hijacking the `console.log` function in the injected script and sending a `POST` to `/ls-log`.
 
 ## 4. The Power of `ReleaseSmall`
 Through this series, we learned that Linux binaries carry heavy debug info. By mastering the build system, we shrunk our production binary from **12MB** to **133KB**.

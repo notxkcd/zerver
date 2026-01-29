@@ -1,4 +1,4 @@
-# 🚀 SimpleHTTPServer Pro (Zig Edition)
+# 🚀 Zerver Pro (Zig Edition)
 
 A professional-grade, suckless, and ultra-fast file-serving machine rewritten from Go to pure Zig 0.15.2. This is not just a server; it's an elite development environment in a single tiny binary.
 
@@ -31,7 +31,7 @@ Go from Go-developer to Zig-expert with our step-by-step masterclass:
 - [Chapter 10: Final Source Review](tutorials/10_final_source_review.md)
 
 ## 📖 Documentation
-Detailed API documentation is available at [https://notxkcd.github.io/simplehttpserver-zig/](https://notxkcd.github.io/simplehttpserver-zig/)
+Detailed API documentation is available at [https://notxkcd.github.io/zerver-zig/](https://notxkcd.github.io/zerver-zig/)
 
 ## 🛠️ Performance & Security
 - **Multithreaded**: One OS thread per connection for maximum throughput.

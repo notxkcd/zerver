@@ -51,8 +51,8 @@ pub const Options = struct {
 };
 
 fn printHelp() void {
-    std.debug.print("SimpleHTTPServer Pro (Zig Edition)\n\n", .{});
-    std.debug.print("Usage: simplehttpserver [options] [path]\n\n", .{});
+    std.debug.print("Zerver Pro (Zig Edition)\n\n", .{});
+    std.debug.print("Usage: zerver [options] [path]\n\n", .{});
     std.debug.print("Options:\n", .{});
     std.debug.print("  -listen <addr:port>  Bind address and port (default: 0.0.0.0:8000)\n", .{});
     std.debug.print("  -port <port>         Listen port\n", .{});
