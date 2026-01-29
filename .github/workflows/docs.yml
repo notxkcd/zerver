@@ -1,0 +1,17 @@
+name: Deploy Docs
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mlugg/setup-zig@v1
+        with:
+          zig-version: 0.15.2
+      - run: zig build docs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: zig-out/docs
+      - uses: actions/deploy-pages@v4
